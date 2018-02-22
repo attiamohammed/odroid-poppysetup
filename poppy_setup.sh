@@ -32,9 +32,6 @@ fi
 
 apt-get update
 apt-get install --yes avahi-daemon avahi-autoipd passwd libnss-mdns network-manager iptables
-
-echo -e "\e[33mResize your file system.\e[0m"
-resize_p2
     
 # Do it only if it is a ODROID U3
 if [ -e /etc/smsc95xx_mac_addr ]; then
@@ -46,7 +43,7 @@ fi
 
 echo -e "\e[33mdownload needed files.\e[0m"
 wget -P $HOME/src https://raw.githubusercontent.com/poppy-project/odroid-poppysetup/master/src/poppy_launcher.sh
-cd $HOME/src; bash poppy_launcher.sh; rm poppy_launcher.sh
+#cd $HOME/src; bash poppy_launcher.sh; rm poppy_launcher.sh
 echo $creature > $HOME/src/creature
 cd ..
 
